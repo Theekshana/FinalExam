@@ -28,22 +28,15 @@ class Login : Fragment() {
             val strName = binding.etName.text.toString()
             val strPassword = binding.etPassword.text.toString()
 
-            when {
-                strName.isBlank() -> {
-                    Toast.makeText(context, "Enter valid name ", Toast.LENGTH_LONG).show()
-                }
+            if (strName=="admin" && strPassword=="password"){
 
-                else -> {
+                val action = LoginDirections.actionLoginToHome2()
+                findNavController().navigate(action)
 
-                    val action = LoginDirections.actionLoginToHome2()
-                    findNavController().navigate(action)
-
-                }
-            }
-
+            }else
+                Toast.makeText(context, "Enter valid username ", Toast.LENGTH_LONG).show()
 
         }
-
 
         return binding.root
     }
