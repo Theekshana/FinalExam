@@ -28,13 +28,14 @@ class Login : Fragment() {
             val strName = binding.etName.text.toString()
             val strPassword = binding.etPassword.text.toString()
 
-            if (strName=="admin" && strPassword=="password"){
+            if (strName == "admin" && strPassword == "password") {
 
                 val action = LoginDirections.actionLoginToHome2()
                 findNavController().navigate(action)
 
-            }else
-                Toast.makeText(context, "Enter valid username ", Toast.LENGTH_LONG).show()
+            } else
+                Toast.makeText(context, "Enter valid username and password ", Toast.LENGTH_LONG)
+                    .show()
 
         }
 

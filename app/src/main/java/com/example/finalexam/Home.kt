@@ -25,11 +25,6 @@ class Home : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
 
-        binding.showUser.text = "Name $showName"
-
-
-
-
         return binding.root
 
     }
